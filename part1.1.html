@@ -16,7 +16,7 @@
         <script>
             function reply_click(clicked_object)
                 {
-                    var sql = clicked_object.getAttribute('employees');
+                    var sql = clicked_object.getAttribute('data-sql');
                     console.log(sql);
                     editor.setValue(sql);
                 }
@@ -31,16 +31,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -54,19 +44,15 @@
                 <p>File: employees.db</p>            
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.1" class="btn btn-success btn-block" employees="SELECT * FROM departments LIMIT 100" onClick="reply_click(this)">1.1</button>
-                <button name="1.2" class="btn btn-success btn-block" employees="SELECT emp_no, first_name, last_name, hire_date FROM employees LIMIT 100" onClick="reply_click(this)">1.2</button>
-                <button name="1.3" class="btn btn-success btn-block" employees="SELECT dept_name FROM departments LIMIT 100" onClick="reply_click(this)">1.3</button>
-                <button name="1.4" class="btn btn-success btn-block" employees="SELECT DISTINCT title FROM titles ORDER BY title ASC LIMIT 100" onClick="reply_click(this)">1.4</button>
-                <button name="1.5" class="btn btn-success btn-block" employees="SELECT hire_date, first_name, last_name FROM employees ORDER BY first_name, last_name ASC LIMIT 100" onClick="reply_click(this)">1.5</button>        
+                <button name="1.1" class="btn btn-success btn-block" data-sql="SELECT * FROM departments LIMIT 100" onClick="reply_click(this)">1.1</button>
+                <button name="1.2" class="btn btn-success btn-block" data-sql="SELECT emp_id, first_name, last_name, hire_date FROM employees LIMIT 100" onClick="reply_click(this)">1.2</button>
+                <button name="1.3" class="btn btn-success btn-block" data-sql="SELECT dept_name FROM departments LIMIT 100" onClick="reply_click(this)">1.3</button>
+                <button name="1.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT title FROM titles ORDER BY title ASC LIMIT 100" onClick="reply_click(this)">1.4</button>
+                <button name="1.5" class="btn btn-success btn-block" data-sql="SELECT hire_date, first_name, last_name FROM employees ORDER BY first_name, last_name ASC LIMIT 100" onClick="reply_click(this)">1.5</button>        
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-SELECT * FROM departments;
-SELECT emp_no, first_name, last_name, hire_date FROM employees;
-SELECT dept_name FROM departments;
-SELECT DISTINCT title FROM titles ORDER BY title ASC;
-SELECT hire_date, first_name, last_name FROM employees ORDER BY first_name, last_name ASC;
+
                 </textarea>
                 <div class="d-grid gap-2 mt-2">
                 <button class="btn btn-success" type="button" id="execute">Execute</button>
