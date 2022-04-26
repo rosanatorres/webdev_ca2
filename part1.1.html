@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="CA2 Web Dev" />
         <meta name="author" content="Rosana Cardoso Batista Torres" />
-        <title>WebDev CA2</title>
+        <title>Web Dev CA2</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -30,7 +30,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.html"><b>Home</b></a></li>
                     </ul>
                 </div>
             </div>
@@ -41,18 +41,18 @@
             <div class="col-lg-12 text-center">
                 <h1>Web Dev CA 2</h1>
                 <p class="lead">Information about Database Employees</p>
-                <p>File: employees.db</p>            
+                <p>File: employees</p>            
             </div>
             <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                <button name="1.1" class="btn btn-success btn-block" data-sql="SELECT * FROM departments LIMIT 100" onClick="reply_click(this)">1.1</button>
-                <button name="1.2" class="btn btn-success btn-block" data-sql="SELECT emp_id, first_name, last_name, hire_date FROM employees LIMIT 100" onClick="reply_click(this)">1.2</button>
-                <button name="1.3" class="btn btn-success btn-block" data-sql="SELECT dept_name FROM departments LIMIT 100" onClick="reply_click(this)">1.3</button>
-                <button name="1.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT title FROM titles ORDER BY title ASC LIMIT 100" onClick="reply_click(this)">1.4</button>
-                <button name="1.5" class="btn btn-success btn-block" data-sql="SELECT hire_date, first_name, last_name FROM employees ORDER BY first_name, last_name ASC LIMIT 100" onClick="reply_click(this)">1.5</button>        
+                <button name="1.1" class="btn btn-success btn-block" data-sql="SELECT &#42; FROM departments LIMIT 100" onClick="reply_click(this)">1.1 List all attributes present in the departments relation</button>
+                <button name="1.2" class="btn btn-success btn-block" data-sql="SELECT emp_id, first_name, last_name, hire_date FROM employees LIMIT 100" onClick="reply_click(this)">1.2 List all employee IDs of all past/current employees, their first and last names</button>
+                <button name="1.3" class="btn btn-success btn-block" data-sql="SELECT dept_name FROM departments LIMIT 100" onClick="reply_click(this)">1.3 List all department titles present in the database</button>
+                <button name="1.4" class="btn btn-success btn-block" data-sql="SELECT DISTINCT title FROM titles ORDER BY title ASC LIMIT 100" onClick="reply_click(this)">1.4 List all unique job titles found in the database, and order them alphabetically</button>
+                <button name="1.5" class="btn btn-success btn-block" data-sql="SELECT hire_date, first_name, last_name FROM employees ORDER BY first_name, last_name ASC LIMIT 100" onClick="reply_click(this)">1.5 List all past/current employees’ names ordered alphabetically in ascending order, i.e. first name and last name in alphabetical order</button>        
             </div>
             <div class="col-lg-10 order-2">
                 <textarea id="commands" class="col-lg-8 order-2 mb-5">
-
+                
                 </textarea>
                 <div class="d-grid gap-2 mt-2">
                 <button class="btn btn-success" type="button" id="execute">Execute</button>
