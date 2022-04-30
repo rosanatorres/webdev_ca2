@@ -31,6 +31,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.html"><b>Home</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="part1.html">Part 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="part3.html">Part 3</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,9 +52,9 @@
                 <button name="1.4" class="btn btn-success btn-block" data-sql="SELECT emp_id, last_name, hire_date FROM employees WHERE hire_date <'1986-01-01' AND last_name = 'Simmel' ORDER BY hire_date DESC LIMIT 100" onClick="reply_click(this)">1.4 List past/current employees hired prior to 1986-01-01 with the surname Simmel</button>
                 <button name="1.5" class="btn btn-success btn-block" data-sql="SELECT COUNT (emp_id) AS Total_with_B FROM employees WHERE last_name like 'B%' LIMIT 100" onClick="reply_click(this)">1.5 How many past/current employees’ last name begins with the capital letter B? Use a column alias total with B to output your results</button>
                 <button name="1.6" class="btn btn-success btn-block" data-sql="CREATE TABLE emp_training (trainer_no integer PRIMARY KEY AUTOINCREMENT, first_name varchar not null, last_name vachar not null, t_modulo varchar)" onClick="reply_click(this)">1.6 Create a new table called emp_training with 3 columns</button>
-                <button name="1.7" class="btn btn-success btn-block" data-sql="INSERT INTO emp_training VALUES (1,'Joe', 'Bloggs', 'Google Docs'), (2,'Fred','Bloggs', 'Google Docs')" onClick="reply_click(this)">1.7 Insert 2 new rows into the emp_training table</button>
+                <button name="1.7" class="btn btn-success btn-block" data-sql="INSERT INTO emp_training (first_name, last_name, t_module) VALUES ('Joe', 'Bloggs', 'Google Docs'); INSERT INTO emp_training (first_name, last_name, t_module) VALUES ('Fred', 'Bloggs', 'Google Sheets') " onClick="reply_click(this)">1.7 Insert 2 new rows into the emp_training table</button>
                 <button name="1.8" class="btn btn-success btn-block" data-sql="DROP TABLE IF EXISTS emp_training" onClick="reply_click(this)">1.8 The organisation no longer wishes to record the employees training within the database. Therefore, delete the newly created emp_training table</button>
-                <button name="1.9" class="btn btn-success btn-block" data-sql="ALTER TABLE employees ADD email_address varchar LIMIT 100" onClick="reply_click(this)">1.9 Alter the employees table to include an email_address field of type varchar(20)</button>
+                <button name="1.9" class="btn btn-success btn-block" data-sql="ALTER TABLE employees ADD email_address varchar" onClick="reply_click(this)">1.9 Alter the employees table to include an email_address field of type varchar(20)</button>
                 <button name="1.10" class="btn btn-success btn-block" data-sql="UPDATE employees SET email_address = 'gfacello@gmail.com' WHERE emp_id = 10001" onClick="reply_click(this)">1.10 Update the email address of Georgi Facello to gfacello@gmail.com, where emp_id equals to 10001</button>
             </div>
             <div class="col-lg-10 order-2">
